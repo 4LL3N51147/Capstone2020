@@ -9,10 +9,10 @@ import glob
 import logging
 import os
 import sys
-
+from datetime import datetime
 import tensorflow as tf
 
-logging.getLogger('tensorflow').disabled = True
+# logging.getLogger('tensorflow').disabled = True
 
 import numpy as np
 from fawkes.differentiator import FawkesMaskGeneration
@@ -21,7 +21,6 @@ from fawkes.utils import load_extractor, init_gpu, select_target_label, dump_ima
 
 from fawkes.align_face import aligner
 from fawkes.utils import get_file
-
 
 def generate_cloak_images(protector, image_X, target_emb=None):
     cloaked_image_X = protector.attack(image_X, target_emb)
@@ -34,9 +33,9 @@ class Fawkes(object):
         self.feature_extractor = feature_extractor
         self.gpu = gpu
         self.batch_size = batch_size
-        # global sess
+        global sess
         sess = init_gpu(gpu)
-        # global graph
+        global graph
         graph = tf.get_default_graph()
 
         model_dir = os.path.join(os.path.expanduser('~'), '.fawkes')
@@ -93,8 +92,9 @@ class Fawkes(object):
 
         current_param = "-".join([str(x) for x in [mode, th, sd, lr, max_step, batch_size, format,
                                                    separate_target, debug]])
-        print(current_param)
+        print("Fininshed Setting Parameters at: {}".format(datetime.now()))
         image_paths, loaded_images = filter_image_paths(image_paths)
+        print("Finished Loading Images at: {}".format(datetime.now()))
 
         if not image_paths:
             print("No images in the directory")
@@ -103,6 +103,7 @@ class Fawkes(object):
         with graph.as_default():
             faces = Faces(image_paths, loaded_images, self.aligner, verbose=1, no_align=no_align)
             original_images = faces.cropped_faces
+            print("Finished Detecting Faces In The Images at: {}".format(datetime.now()))
 
             if len(original_images) == 0:
                 print("No face detected. ")
@@ -112,20 +113,26 @@ class Fawkes(object):
             with sess.as_default():
                 if separate_target:
                     target_embedding = []
+                    i = 0
+                    print("Start image reshape at: {}".format(datetime.now()))
                     for org_img in original_images:
                         org_img = org_img.reshape([1] + list(org_img.shape))
+                        print("Finished Image {} Reshape at: {}".format(i, datetime.now()))
                         tar_emb = select_target_label(org_img, self.feature_extractors_ls, self.fs_names)
+                        print("Finished Target Embedding Image {} at: {}".format(i, datetime.now()))
                         target_embedding.append(tar_emb)
+                        i += 1
                     target_embedding = np.concatenate(target_embedding)
                 else:
                     target_embedding = select_target_label(original_images, self.feature_extractors_ls, self.fs_names)
+                print("Finished All Images Target Embedding at: {}".format(datetime.now()))
 
                 if current_param != self.protector_param:
                     self.protector_param = current_param
 
                     if self.protector is not None:
                         del self.protector
-
+                
                     self.protector = FawkesMaskGeneration(sess, self.feature_extractors_ls,
                                                           batch_size=batch_size,
                                                           mimic_img=True,
@@ -138,20 +145,25 @@ class Fawkes(object):
                                                           maximize=False,
                                                           keep_final=False,
                                                           image_shape=(224, 224, 3))
+                
+                print("Finished Initializing Fawkes Protector at: {}".format(datetime.now()))
 
                 protected_images = generate_cloak_images(self.protector, original_images,
                                                          target_emb=target_embedding)
+                
+                print("Finished Protecting Images at: {}".format(datetime.now()))
 
                 faces.cloaked_cropped_faces = protected_images
 
                 final_images = faces.merge_faces(reverse_process_cloaked(protected_images),
                                                  reverse_process_cloaked(original_images))
+                print("Finished Merging Faces at: {}".format(datetime.now()))
 
         for p_img, path in zip(final_images, image_paths):
             file_name = "{}_{}_cloaked.{}".format(".".join(path.split(".")[:-1]), mode, format)
             dump_image(p_img, file_name, format=format)
 
-        print("Done!")
+        print("Done! and Finished Exporting File at: {}".format(datetime.now()))
         return 1
 
 
@@ -198,6 +210,8 @@ def main(*argv):
     parser.add_argument('--format', type=str,
                         help="format of the output image",
                         default="png")
+    
+    print("Finished Fawkes CLI tools argument setup at: {}".format(datetime.now()))
 
     args = parser.parse_args(argv[1:])
 
@@ -208,14 +222,20 @@ def main(*argv):
     image_paths = glob.glob(os.path.join(args.directory, "*"))
     image_paths = [path for path in image_paths if "_cloaked" not in path.split("/")[-1]]
 
+    print("Finished Loading Images Paths at: {}".format(datetime.now()))
+
     protector = Fawkes(args.feature_extractor, args.gpu, args.batch_size)
+    print("Finished Initializing Fawkes at: {}".format(datetime.now()))
+
     if args.mode == 'all':
         for mode in ['min', 'low', 'mid', 'high']:
+            print("Start running protection at: {}".format(datetime.now()))
             protector.run_protection(image_paths, mode=mode, th=args.th, sd=args.sd, lr=args.lr,
                                      max_step=args.max_step,
                                      batch_size=args.batch_size, format=args.format,
                                      separate_target=args.separate_target, debug=args.debug, no_align=args.no_align)
     else:
+        print("Start running protection at: {}".format(datetime.now()))
         protector.run_protection(image_paths, mode=args.mode, th=args.th, sd=args.sd, lr=args.lr,
                                  max_step=args.max_step,
                                  batch_size=args.batch_size, format=args.format,
