@@ -1,4 +1,4 @@
-Fawkes
+Original Fawkes Project
 ------
 
 Fawkes is a privacy protection system developed by researchers at [SANDLab](https://sandlab.cs.uchicago.edu/), University of Chicago. For more information about the project, please refer to our project [webpage](https://sandlab.cs.uchicago.edu/fawkes/). Contact us at fawkes-team@googlegroups.com. 
@@ -7,13 +7,9 @@ We published an academic paper to summarize our work "[Fawkes: Protecting Person
 
 NEW! If you would like to use Fawkes to protect your identity, please check out our software and binary implementation on the [website](https://sandlab.cs.uchicago.edu/fawkes/#code). 
 
-
-
 Copyright
 ---------
 This code is intended only for personal privacy protection or academic research. 
-
-We are currently exploring the filing of a provisional patent on the Fawkes algorithm. 
 
 Usage
 -----
@@ -44,34 +40,13 @@ when --mode is `custom`:
 - Turn on separate target if the images in the directory belong to different people, otherwise, turn it off. 
 - Run on GPU. The current Fawkes package and binary does not support GPU. To use GPU, you need to clone this, install the required packages in `setup.py`, and replace tensorflow with tensorflow-gpu. Then you can run Fawkes by `python3 fawkes/protection.py [args]`. 
 
-![](http://sandlab.cs.uchicago.edu/fawkes/files/obama.png)
 
-### How do I know my images are secure? 
-We are actively working on this. Python scripts that can test the protection effectiveness will be ready shortly. 
+### Capstone 2020
 
-Quick Installation
-------------------
+The aim of our project is to improve upon the original fawkes project by hopefully optimizing the protection process, provide a more user-friendly interface and a more accessible chrome extension distribution of the original software which hopefully can also support GPU.
 
-Install from [PyPI](https://pypi.org/project/fawkes/):
+Currently, we are still running test on the original Fawkes binary, namely benchmarking its runtime.
 
-```
-pip install fawkes
-```
+You can run it as:
 
-If you don't have root privilege, please try to install on user namespace: `pip install --user fawkes`.
-
-Contribute to Fawkes
---------------------
-
-If you would like to contribute to make Fawkes software better, please checkout our [project list](https://github.com/Shawn-Shan/fawkes/projects/1) which contains our TODOs. If you are confident in helping, please open a pull requests and explain the plans for your changes. We will try our best to approve asap, and once approved, you can work on it. 
-
-
-### Citation
-```
-@inproceedings{shan2020fawkes,
-  title={Fawkes: Protecting Personal Privacy against Unauthorized Deep Learning Models},
-  author={Shan, Shawn and Wenger, Emily and Zhang, Jiayun and Li, Huiying and Zheng, Haitao and Zhao, Ben Y},
-  booktitle="Proc. of USENIX Security",
-  year={2020}
-}
-```
+> python3 Capstone2020/fawkes/protection.py -d ./imgs --mode min > {benchmark result file path}
