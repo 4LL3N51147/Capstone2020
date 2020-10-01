@@ -356,10 +356,10 @@ class FawkesMaskGeneration:
                     break
                 total_distance[e] = bottlesim
 
-        # if self.verbose == 0:
-        #     progressbar = Progbar(
-        #         self.MAX_ITERATIONS, width=30, verbose=1
-        #     )
+        if self.verbose == 0:
+            # progressbar = Progbar(
+            #     self.MAX_ITERATIONS, width=30, verbose=1
+            # )
 
         for iteration in range(self.MAX_ITERATIONS):
 
@@ -401,8 +401,8 @@ class FawkesMaskGeneration:
                     bottlesim_sum = self.sess.run(self.bottlesim_sum)
                     print('ITER %4d perturb: %.5f; sim: %f'
                           % (iteration, dist_raw_sum / nb_imgs, bottlesim_sum / nb_imgs))
-            if self.verbose == 0:
-                progressbar.update(iteration)
+            # if self.verbose == 0:
+            #     progressbar.update(iteration)
 
         if self.verbose == 1:
             loss_sum = float(self.sess.run(self.loss_sum))
