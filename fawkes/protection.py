@@ -12,7 +12,7 @@ import sys
 from datetime import datetime
 import tensorflow as tf
 
-# logging.getLogger('tensorflow').disabled = True
+logging.getLogger('tensorflow').disabled = True
 
 import numpy as np
 from fawkes.differentiator import FawkesMaskGeneration
