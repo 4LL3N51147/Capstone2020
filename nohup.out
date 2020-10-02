@@ -1,0 +1,100 @@
+--------1--------
+Testing 1 face 1 img with 4 modes
+Currently running Fawkes with 1_Face_1_Img in min mode for the 1 time
+Log file saved to /root/1_Face_1_Img_min_1.log
+Currently running Fawkes with 1_Face_1_Img in low mode for the 1 time
+Log file saved to /root/1_Face_1_Img_low_1.log
+Currently running Fawkes with 1_Face_1_Img in mid mode for the 1 time
+Log file saved to /root/1_Face_1_Img_mid_1.log
+Currently running Fawkes with 1_Face_1_Img in high mode for the 1 time
+Log file saved to /root/1_Face_1_Img_high_1.log
+--------2--------
+Testing 1 face 1 img with 4 modes
+Currently running Fawkes with 1_Face_1_Img in min mode for the 2 time
+Log file saved to /root/1_Face_1_Img_min_2.log
+Currently running Fawkes with 1_Face_1_Img in low mode for the 2 time
+Log file saved to /root/1_Face_1_Img_low_2.log
+Currently running Fawkes with 1_Face_1_Img in mid mode for the 2 time
+Log file saved to /root/1_Face_1_Img_mid_2.log
+Currently running Fawkes with 1_Face_1_Img in high mode for the 2 time
+Log file saved to /root/1_Face_1_Img_high_2.log
+--------3--------
+Testing 1 face 1 img with 4 modes
+Currently running Fawkes with 1_Face_1_Img in min mode for the 3 time
+Log file saved to /root/1_Face_1_Img_min_3.log
+Currently running Fawkes with 1_Face_1_Img in low mode for the 3 time
+Log file saved to /root/1_Face_1_Img_low_3.log
+Currently running Fawkes with 1_Face_1_Img in mid mode for the 3 time
+Log file saved to /root/1_Face_1_Img_mid_3.log
+Currently running Fawkes with 1_Face_1_Img in high mode for the 3 time
+Log file saved to /root/1_Face_1_Img_high_3.log
+--------4--------
+Testing 1 face 1 img with 4 modes
+Currently running Fawkes with 1_Face_1_Img in min mode for the 4 time
+Log file saved to /root/1_Face_1_Img_min_4.log
+Currently running Fawkes with 1_Face_1_Img in low mode for the 4 time
+Log file saved to /root/1_Face_1_Img_low_4.log
+Currently running Fawkes with 1_Face_1_Img in mid mode for the 4 time
+Log file saved to /root/1_Face_1_Img_mid_4.log
+Currently running Fawkes with 1_Face_1_Img in high mode for the 4 time
+Log file saved to /root/1_Face_1_Img_high_4.log
+--------5--------
+Testing 1 face 1 img with 4 modes
+Currently running Fawkes with 1_Face_1_Img in min mode for the 5 time
+Log file saved to /root/1_Face_1_Img_min_5.log
+Currently running Fawkes with 1_Face_1_Img in low mode for the 5 time
+Log file saved to /root/1_Face_1_Img_low_5.log
+Currently running Fawkes with 1_Face_1_Img in mid mode for the 5 time
+Log file saved to /root/1_Face_1_Img_mid_5.log
+Currently running Fawkes with 1_Face_1_Img in high mode for the 5 time
+Log file saved to /root/1_Face_1_Img_high_5.log
+--------3--------
+Testing 1 face with 4 faces
+Currently running Fawkes with 4_Face_1_Img in min mode for the 1 time
+Log file saved to /root/4_Face_1_Img_min_1.log
+--------3--------
+Testing 1 face with 4 faces
+Currently running Fawkes with 4_Face_1_Img in min mode for the 2 time
+Log file saved to /root/4_Face_1_Img_min_2.log
+--------3--------
+Testing 1 face with 4 faces
+Currently running Fawkes with 4_Face_1_Img in min mode for the 3 time
+Log file saved to /root/4_Face_1_Img_min_3.log
+--------3--------
+Testing 1 face with 4 faces
+Currently running Fawkes with 4_Face_1_Img in min mode for the 4 time
+Log file saved to /root/4_Face_1_Img_min_4.log
+--------3--------
+Testing 1 face with 4 faces
+Currently running Fawkes with 4_Face_1_Img in min mode for the 5 time
+Log file saved to /root/4_Face_1_Img_min_5.log
+--------1--------
+Testing 1 face with 1,5 and 10 imgs
+Currently running Fawkes with 1_Face_5_Img in min mode for the 1 time
+Log file saved to /root/1_Face_5_Img_min_1.log
+Currently running Fawkes with 1_Face_10_Img in min mode for the 1 time
+Log file saved to /root/1_Face_10_Img_min_1.log
+--------2--------
+Testing 1 face with 1,5 and 10 imgs
+Currently running Fawkes with 1_Face_5_Img in min mode for the 2 time
+Log file saved to /root/1_Face_5_Img_min_2.log
+Currently running Fawkes with 1_Face_10_Img in min mode for the 2 time
+Log file saved to /root/1_Face_10_Img_min_2.log
+--------3--------
+Testing 1 face with 1,5 and 10 imgs
+Currently running Fawkes with 1_Face_5_Img in min mode for the 3 time
+Log file saved to /root/1_Face_5_Img_min_3.log
+Currently running Fawkes with 1_Face_10_Img in min mode for the 3 time
+Log file saved to /root/1_Face_10_Img_min_3.log
+--------4--------
+Testing 1 face with 1,5 and 10 imgs
+Currently running Fawkes with 1_Face_5_Img in min mode for the 4 time
+Log file saved to /root/1_Face_5_Img_min_4.log
+Currently running Fawkes with 1_Face_10_Img in min mode for the 4 time
+Log file saved to /root/1_Face_10_Img_min_4.log
+--------5--------
+Testing 1 face with 1,5 and 10 imgs
+Currently running Fawkes with 1_Face_5_Img in min mode for the 5 time
+Log file saved to /root/1_Face_5_Img_min_5.log
+Currently running Fawkes with 1_Face_10_Img in min mode for the 5 time
+Log file saved to /root/1_Face_10_Img_min_5.log

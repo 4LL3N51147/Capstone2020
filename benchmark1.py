@@ -4,7 +4,7 @@ import os
 parent_directory = 'imgs'
 modes = ['min', "low", "mid", "high"]
 for i in range (1, 6):
-    print("--------{i}--------\nTesting 1 face 1 img with 4 modes".format(i))
+    print("--------{}--------\nTesting 1 face 1 img with 4 modes".format(i))
     folder_name = '1_Face_1_Img'
     for mode in modes:
         print("Currently running Fawkes with {} in {} mode for the {} time".format(folder_name, mode, i))
