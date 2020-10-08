@@ -266,7 +266,7 @@ def init_gpu(gpu_index, force=False):
 
 def fix_gpu_memory(mem_fraction=1):
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-    tf_config = None
+    tf_config = tf.ConfigProto(intra_op_parallelism_threads=16, inter_op_parallelism_threads=2, allow_soft_placement=True, device_count = {'CPU': 16})
     if tf.test.is_gpu_available():
         gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=mem_fraction)
         tf_config = tf.ConfigProto(gpu_options=gpu_options)

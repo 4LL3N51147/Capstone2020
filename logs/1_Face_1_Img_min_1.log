@@ -1,41 +1,13 @@
-Finished Fawkes CLI tools argument setup at: 2020-10-02 03:24:12.271306
-Finished Loading Images Paths at: 2020-10-02 03:24:12.271582
-Finished Initializing Fawkes at: 2020-10-02 03:24:22.895643
-Start running protection at: 2020-10-02 03:24:22.895665
-Fininshed Setting Parameters at: 2020-10-02 03:24:22.896008
-Identify 1 files in the directory
-Identify 1 images in the directory
-Finished Loading Images at: 2020-10-02 03:24:22.903149
-Find 1 face(s) in 0.jpg
-Finished Detecting Faces In The Images at: 2020-10-02 03:24:23.686719
-target ID: 20793
-Finished All Images Target Embedding at: 2020-10-02 03:24:27.181054
-Finished Initializing Fawkes Protector at: 2020-10-02 03:24:42.033938
-1 batches in total
-processing image 1 at 2020-10-02 03:24:42.034572
-
- 0/20 [..............................] - ETA: 0s
- 1/20 [>.............................] - ETA: 3:41
- 2/20 [==>...........................] - ETA: 1:52
- 3/20 [===>..........................] - ETA: 1:15
- 4/20 [=====>........................] - ETA: 56s 
- 5/20 [======>.......................] - ETA: 44s
- 6/20 [========>.....................] - ETA: 36s
- 7/20 [=========>....................] - ETA: 30s
- 8/20 [===========>..................] - ETA: 26s
- 9/20 [============>.................] - ETA: 22s
-10/20 [==============>...............] - ETA: 19s
-11/20 [===============>..............] - ETA: 16s
-12/20 [=================>............] - ETA: 13s
-13/20 [==================>...........] - ETA: 11s
-14/20 [====================>.........] - ETA: 9s 
-15/20 [=====================>........] - ETA: 7s
-16/20 [=======================>......] - ETA: 6s
-17/20 [========================>.....] - ETA: 4s
-18/20 [==========================>...] - ETA: 2s
-19/20 [===========================>..] - ETA: 1s
-
-protection cost 28.468601 s
-Finished Protecting Images at: 2020-10-02 03:25:10.503434
-Finished Merging Faces at: 2020-10-02 03:25:10.514473
-Done! and Finished Exporting File at: 2020-10-02 03:25:10.556086
+Finished Fawkes CLI tools argument setup at, 2020-10-02 03:24:12.271306
+Finished Loading Images Paths at, 2020-10-02 03:24:12.271582
+Finished Initializing Fawkes at, 2020-10-02 03:24:22.895643
+Start running protection at, 2020-10-02 03:24:22.895665
+Fininshed Setting Parameters at, 2020-10-02 03:24:22.896008
+Finished Loading Images at, 2020-10-02 03:24:22.903149
+Finished Detecting Faces In The Images at, 2020-10-02 03:24:23.686719
+Finished All Images Target Embedding at, 2020-10-02 03:24:27.181054
+Finished Initializing Fawkes Protector at, 2020-10-02 03:24:42.033938
+processing image 1 at, 2020-10-02 03:24:42.034572
+Finished Protecting Images at, 2020-10-02 03:25:10.503434
+Finished Merging Faces at, 2020-10-02 03:25:10.514473
+Done! and Finished Exporting File at, 2020-10-02 03:25:10.556086

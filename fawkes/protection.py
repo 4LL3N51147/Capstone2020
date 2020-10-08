@@ -29,7 +29,6 @@ def generate_cloak_images(protector, image_X, target_emb=None):
 
 class Fawkes(object):
     def __init__(self, feature_extractor, gpu, batch_size):
-
         self.feature_extractor = feature_extractor
         self.gpu = gpu
         self.batch_size = batch_size
