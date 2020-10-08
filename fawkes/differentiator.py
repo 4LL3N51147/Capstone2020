@@ -357,9 +357,9 @@ class FawkesMaskGeneration:
                 total_distance[e] = bottlesim
 
         if self.verbose == 0:
-            # progressbar = Progbar(
-            #     self.MAX_ITERATIONS, width=30, verbose=1
-            # )
+            progressbar = Progbar(
+                self.MAX_ITERATIONS, width=30, verbose=1
+            )
 
         for iteration in range(self.MAX_ITERATIONS):
 
