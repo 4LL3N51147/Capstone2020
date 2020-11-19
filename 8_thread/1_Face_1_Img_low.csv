@@ -1,0 +1,13 @@
+Finished Fawkes CLI tools argument setup,0,0,0,0,0
+Finished Loading Images Paths,0.000571,0.000366,0.000365,0.000362,0.000376
+Finished Initializing Fawkes,24.578663,14.922701,14.821371,14.91364,14.991379
+Start running protection,3.8e-05,3.3e-05,3.3e-05,3.2e-05,3.3e-05
+Fininshed Setting Parameters,2.8e-05,0.000323,2.6e-05,2.8e-05,0.00027
+Finished Loading Images,0.012207,0.009042,0.008988,0.009162,0.009278
+Finished Detecting Faces In The Images,2.071728,1.050173,1.015616,1.025538,1.04707
+Finished All Images Target Embedding,8.430888,4.78412,4.68909,5.124632,4.805887
+Finished Initializing Fawkes Protector,23.391192,20.920326,20.975969,21.064469,21.005331
+processing image 1,0.000716,0.00072,0.000718,0.000715,0.000705
+Finished Protecting Images,72.144298,63.07604,62.915549,63.234256,63.238998
+Finished Merging Faces,0.017595,0.011956,0.011887,0.011782,0.011738
+Done! and Finished Exporting File,0.075129,0.042657,0.042711,0.042618,0.042847
