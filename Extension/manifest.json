@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "TRY",
+  "version": "2.2",
+  "description": "A Chrome plugin implementation of the Fawkes ",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  
+
+
+  "browser_action": {
+		"default_icon": {
+      "16": "images/fawkes_16.png",
+      "32": "images/fawkes_32.png",
+      "48": "images/fawkes_48.png",
+      "128": "images/fawkes_128.jpg"
+    },	
+		"default_title": "jump to popup.html",
+		"default_popup": "try_3.html"	
+  }
+  
+
+
+  
+}
