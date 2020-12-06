@@ -38,6 +38,7 @@ def index():
 def upload_files():
 	token = genSecretToken()
 	print(token)
+	print(request)
 	uploaded_file = request.files['file']
 	selected_mode = request.form['mode']
 	file_full = secure_filename(uploaded_file.filename)
