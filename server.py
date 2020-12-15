@@ -5,6 +5,7 @@ import time
 import secrets 
 import string
 import pathlib
+import base64
 from flask import Flask, render_template, request, redirect, url_for, abort, Response, send_file
 from werkzeug.utils import secure_filename
 
@@ -37,11 +38,11 @@ def index():
 @app.route('/', methods=['POST'])
 def upload_files():
 	token = genSecretToken()
-	print(token)
 	print(request)
 	uploaded_file = request.files['file']
 	selected_mode = request.form['mode']
 	file_full = secure_filename(uploaded_file.filename)
+	
 	if file_full != '':
 		file_name, file_ext = os.path.splitext(file_full)
 		if file_ext not in app.config['UPLOAD_EXTENSIONS'] or \
@@ -55,7 +56,9 @@ def upload_files():
 
 	cloaked_image_path = os.path.join(app.config['UPLOAD_PATH'], token, file_name+"_{}_cloaked.png".format(selected_mode))
 	if os.path.exists(cloaked_image_path):
-		return send_file(cloaked_image_path)
+		with open(cloaked_image_path, "rb") as image_file:
+			encoded_string = base64.b64encode(image_file.read())
+			return encoded_string
 	else:
 		return cloaked_image_path
 

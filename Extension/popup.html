@@ -6,30 +6,32 @@
 	<title>3-Select Photos</title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  
 </head>
-
-
-<body style="width:600px;height:400px">
+<body style="width:800px;height:600px">
 	<div class="container">
 		<div class="row clearfix">
 			<div class="col-sm-12 column">
-				<!--标题栏-->
+				<!-- Title -->
 				<div class="card bg-info text-white text-center">
 					<div class="card-body">
-						<h3 class="text-center text-info">Choose Protection Mode</h3></div>
+						<h3 class="text-center text-info">Image Privacy Protection Helper</h3></div>
 				</div>
 				<br>
-				<!--/标题栏-->
-
-				<!--轮播显示图片-->
-				<form method="POST" id="imgForm" enctype="multipart/form-data" action="http://127.0.0.1:5000"> 
-					<div id="previewbox" style="display: block; width: 330px; height: 330px; border: 10px dashed #ccc; text-align: center; font-size: 32px; color: #ccc; line-height: 330px;">
-						Your image
+				<div style="display: flex;">
+					<div class="col-6" id="previewbox" style="width: 320px; height: 320px; border: 10px dashed #ccc; text-align: center; font-size: 32px; color: #ccc; line-height: 330px;">
+						<p>Your image</p>
+						<img id="preview" src="#" alt="your image" style="display: none; vertical-align: top;"/>
 					</div>
-					<img id="preview" src="#" alt="your image" style="display: none;"/>
-					<br>
-					<br>
-					
+					<div class="col-6" id="resultbox" style="width: 320px; height: 320px; border: 10px dashed #ccc; text-align: center; font-size: 32px; color: #ccc; line-height: 330px;">
+						<p>Result image</p>
+						<img id="result"  src="" alt="result imgage" style="display: none; vertical-align: top;"/>
+					</div>
+				</div>
+				<br>
+				<br>
+				
+				<form method="POST" id="imgForm" enctype="multipart/form-data" action="http://127.0.0.1:5000"> 
 					<input type='file' id="imgInput" name="file"/>
+					<br>
 					<input type="radio" id="min" name="mode" value="min" checked>
 					<label for="min">Min</label>
 					<input type="radio" id="low" name="mode" value="low">
@@ -38,58 +40,11 @@
 					<label for="mid">Mid</label>
 					<input type="radio" id="high" name="mode" value="high">
 					<label for="high">High</label><br>
-
-					<input type="submit" value="Submit">
+					<br>
+					<input id="submitButton" type="submit" value="Submit">
 				</form>
 				<br>
 				<br>
-
-				<!-- 下拉选择+？-->
-				<!-- <div class="col-md-10 col-md-offset-1 col-sm-12">
-				
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="btn-group btn-group-md btn-block">
-								<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">Mode
-									<span class="caret"></span>
-								</button>
-					
-								<ul class="dropdown-menu" role="menu" style="min-width:100%;">
-									<li><a href="#">Minimum Protection Mode 
-											<p class="text-muted">
-												(For images contain less private info. Preserve images' originality.)
-											</p>
-										</a>
-									</li>
-									<li><a href="#">Low Protection Mode 
-											<p class="text-muted">
-												(For images contain some private info. Add a little perturbation to images.)
-											</p>
-										</a>
-									</li>
-									<li><a href="#">Medium Protection Mode 
-											<p class="text-muted">
-												(For images contain much private info. Add some perturbation to images.)
-											</p>
-										</a>
-									</li>
-									<li><a href="#">High Protection Mode 
-											<p class="text-muted">
-												(For the most private use. Perturbatin might be non-negligible.)
-											</p>
-										</a>
-									</li>
-								</ul>  
-							</div>
-						</div>
-					</div>
-				</div>        -->
-				<!--/下拉选择+？ -->
-				<br>
-				<br>
-				
-				
-				
 			</div>
 		</div>
 	</div>

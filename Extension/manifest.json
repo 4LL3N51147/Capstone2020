@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "TRY",
-  "version": "2.2",
-  "description": "A Chrome plugin implementation of the Fawkes ",
+  "name": "Image Privacy Protection Helper",
+  "version": "1.0",
+  "description": "A Chrome plugin implementation of the Fawkes Image Privacy Protection Framework",
   "permissions": ["activeTab", "declarativeContent", "storage", "http://127.0.0.1/*"],
   "browser_action": {
 	"default_icon": {
@@ -11,6 +11,6 @@
       "48": "images/fawkes_48.png",
       "128": "images/fawkes_128.jpg"
     },	
-		"default_popup": "popup.html"	
+	"default_popup": "popup.html"	
   }
 }
